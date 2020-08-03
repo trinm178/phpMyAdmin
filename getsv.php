@@ -22,7 +22,12 @@
      $mangSV = array();
 
      while($row = mysqli_fetch_assoc($data)){
-        array_push($mangSV, new sinhvien($row['id'], $row['name'],$row['students_code'],$row['birthday'],$row['phone'],$row['address']));
+        array_push($mangSV, new sinhvien($row['id'], 
+                                         $row['name'],
+                                         $row['students_code'],
+                                         $row['birthday'],
+                                         $row['phone'],
+                                         $row['address']));
     }
     echo json_encode($mangSV);
 ?>
